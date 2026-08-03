@@ -9,6 +9,19 @@ def generate_noisy_images(
     height: int = 400,
     noise_level: float = 0.25
 ):
+    """
+    Generates multiple noisy images from a base image.
+
+    Parameters:
+        output_dir (str): Directory where generated images are saved.
+        n_images (int): Number of noisy images to generate.
+        width (int): Width of generated images in pixels.
+        height (int): Height of generated images in pixels.
+        noise_level (float): Controls the intensity of added Gaussian noise.
+
+    Returns:
+        None
+    """
     # Create the output directory if it does not already exist
     os.makedirs(output_dir, exist_ok=True)
     # Attempt to load Arial font for the generated text
