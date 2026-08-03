@@ -4,6 +4,19 @@ import os
 from glob import glob
 
 def average_images(input_dir: str, output_path: str = "averaged.png"):
+    """
+    Generates multiple noisy images from a base image.
+
+    Parameters:
+        output_dir (str): Directory where generated images are saved.
+        n_images (int): Number of noisy images to generate.
+        width (int): Width of generated images in pixels.
+        height (int): Height of generated images in pixels.
+        noise_level (float): Controls the intensity of added Gaussian noise.
+
+    Returns:
+        None
+    """
     # Find all PNG images inside the input directory
     files = sorted(glob(os.path.join(input_dir, "*.png")))
     # Ensure that there are images available to process
